@@ -17,7 +17,7 @@ class Shortener::ShortenedUrl
   validates :url, :presence => true, :uniqueness => true
   validates :unique_key, :uniqueness => true
 
-  attr_accessible :url, :unique_key
+  #attr_accessible :url, :unique_key
 
   before_create :assign_unique_key
 
