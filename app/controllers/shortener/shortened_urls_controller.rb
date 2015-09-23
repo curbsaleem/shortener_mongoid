@@ -2,6 +2,7 @@ class Shortener::ShortenedUrlsController < ActionController::Base
 
   # find the real link for the shortened link key and redirect
   def show
+    debugger
     # only use the leading valid characters
     token = /^([#{Shortener.key_chars.join}]*).*/.match(params[:id])[1]
 
